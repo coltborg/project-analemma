@@ -13,13 +13,13 @@ const articleLayout = ({ data: { mdx } }) => (
       <h3>Categories</h3>
       <ul>
         {mdx.frontmatter.categories.map(category => (
-          <li>{category}</li>
+          <li key={category}>{category}</li>
         ))}
       </ul>
       <h3>Keywords</h3>
       <ul>
         {mdx.frontmatter.keywords.map(keyword => (
-          <li>{keyword}</li>
+          <li key={keyword}>{keyword}</li>
         ))}
       </ul>
     </header>

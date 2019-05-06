@@ -35,10 +35,14 @@ const Layout = ({ children }) => (
           }}
         >
           <main>{children}</main>
+          {/* TODO: Convert to standalone Footer component */}
           <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+            {/* TODO: Add norel to anchors */}
+            <a href="https://twitter.com/coltborg">Twitter</a> /{' '}
+            <a href="https://www.instagram.com/coltborg/">Instagram</a> /{' '}
+            <a href="https://github.com/coltborg">Github</a> /{' '}
+            <a href="https://codepen.io/coltborg/">CodePen</a>
+            <div>© {new Date().getFullYear()}</div>
           </footer>
         </div>
       </>
