@@ -1,0 +1,181 @@
+---
+slug: '/eslint-for-vuejs'
+date: '2018-07-18T13:35:13.234Z'
+title: 'ESLint for Vue.js'
+description: 'A Quick Guide to Set up ESLint Formatting in VS Code.'
+categories: ['javascript', 'vue', 'vscode']
+keywords: ['eslint', 'prettier', 'vue.js']
+banner: '../images/gatsby-icon.png'
+---
+
+![my image](../images/5k.png)
+
+### Subtitle
+
+A Quick Guide to Set up ESLint Formatting in VS Code
+
+### Description
+
+Setting up VS Code to format on save is annoying. With this simple guide, you can have all the settings to quickly get set up for any Vue.js project.
+
+# tl;dr
+
+Paste these settings into VS Code and have ESLint setup.
+
+```json
+// Workplace settings.json
+{
+  "eslint.enable": true,
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": false,
+  },
+  "[vue]": {
+    "editor.formatOnSave": false,
+  },
+  "eslint.autoFixOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": [
+    {
+      "language": "javascript",
+      "autoFix": true
+    },
+    {
+      "language": "javascriptreact",
+      "autoFix": true
+    },
+    {
+      "language": "vue",
+      "autoFix": true
+    },
+  ],
+  "path-autocomplete.pathMappings": {
+    "~": "${folder}/src",
+    "@": "${folder}/src",
+  }
+}
+```
+
+```js
+// .eslintrc.js
+module.exports = {
+  root: true,
+  env: {
+    node: true,
+  },
+  extends: [
+    'plugin:vue/recommended',
+    '@vue/airbnb',
+  ],
+  rules: {
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'max-len': [0],
+    'import/no-extraneous-dependencies': ['error', {
+      'optionalDependencies': ['test/unit/index.js']
+    }],
+    'import/no-unresolved': 'off',
+    'no-unused-expressions': ['error', { 'allowTernary': true }],
+    'no-param-reassign': 0,
+    'quote-props': ['error', 'consistent'],
+    // vue rules
+    "vue/order-in-components": ["error", {
+      "order": [
+        "el",
+        "name",
+        "parent",
+        "functional",
+        ["delimiters", "comments"],
+        ["components", "directives", "filters"],
+        "extends",
+        "mixins",
+        "inheritAttrs",
+        "model",
+        ["props", "propsData"],
+        "data",
+        "computed",
+        "watch",
+        "LIFECYCLE_HOOKS",
+        "methods",
+        ["template", "render"],
+        "renderError"
+      ]
+    }],
+    'vue/html-closing-bracket-newline': ['error', {
+      'singleline': 'never',
+      'multiline': 'never'
+    }],
+    'vue/html-closing-bracket-spacing': ['error', {
+      'startTag': 'never',
+      'endTag': 'never',
+      'selfClosingTag': 'always'
+    }],
+    'vue/script-indent': ['error', 2, {
+      'baseIndent': 0,
+      'switchCase': 1,
+      'ignores': []
+    }],
+    'vue/max-attributes-per-line': [2, {
+      'singleline': 1,
+      'multiline': {
+        'max': 1,
+        'allowFirstLine': false
+      }
+    }],
+  },
+  parserOptions: {
+    parser: 'babel-eslint',
+  },
+};
+```
+
+# Formatting in Visual Studio Code
+
+I love having my text editor format my code automatically. It saves me from small errors and keeps my code looking uniform.
+
+But every time I set up a new project, I find myself spending a few hours setting up the new project to work the same as my previous projects. This makes me feel not very productive since I've already gotten this set up to work for previous projects.
+
+Especially tricky is setting things up with Vue.js apps. Since [single component files](https://vuejs.org/v2/guide/single-file-components.html) have different sections for markup, style, and script, it takes a little more configuration.
+
+I've found the best approach for me is to have the ESLint [extension for VSC](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) show me errors in the editor, have ESLint [set the rules for formatting](https://eslint.org/docs/rules/), and have ESLint fix anything it can](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems).
+
+# Setup Vue.js app
+
+At the start of a new project, I'll use the [Vue.js CLI](https://cli.vuejs.org/) tool to scaffold everything out. [Once installed](https://cli.vuejs.org/guide/installation.html), start a new project with the `create` command.
+
+```bash
+vue create <project-name>
+```
+
+For simplicity, here are the options I choose for my example project.
+
+Pick a preset:
+
+- Manually select features
+
+Check the features needed for your project:
+
+- Babel
+- Linter / Formatter
+
+Pick a linter / formatter config: (This is up to your personal preference)
+
+- ESLint + Airbnb config
+
+Pick additional lint features:
+
+- Lint on save
+
+Where do you prefer placing config for Babel, PostCSS, ESLint, etc.?
+
+- In dedicated config files
+
+## Side-note about Prettier
+
+[Prettier](https://prettier.io/) just released [support for Vue.js](https://prettier.io/blog/2018/11/07/1.15.0.html), but at the time of writing, I've not explored the possibilities yet. Before Prettier supported Vue.js officially, I wasted several hours trying to get ESLint and Prettier to work nicely together. But the support was just not ready yet.
+
+# Visual Studio Code Settings
+
+By default, VS Code formats JavaScript files. If you leave this on, VS Code will try to format Vue.js files like Javascript, while ESLint will try to format it like a Vue.js file.
+
+🖼 Add image here. Alt text: Vue Files are double formatted on save.

@@ -16,10 +16,10 @@ const Header = ({ siteTitle }) => (
           </h1>
         </li>
         <li>
-          <Link to="/">Uses</Link>
+          <Link to="/uses">Uses</Link>
         </li>
         <li>
-          <Link to="/">Dark</Link>
+          <button type="button">Dark</button>
         </li>
       </ul>
     </nav>
