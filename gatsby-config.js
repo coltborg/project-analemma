@@ -18,6 +18,13 @@ module.exports = {
             options: {
               maxWidth: 1035,
               sizeByPixelDensity: true,
+              linkImagesToOriginal: false,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {
+              destinationDir: 'images',
             },
           },
         ],
