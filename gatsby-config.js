@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Colt Borg`,
-    description: `Colt Borg is a frontend developer, learning in public.`,
     author: `@coltborg`,
+    description: `Colt Borg is a frontend developer, learning in public.`,
+    shareImage: `/images/coltborg-share.png`,
+    title: `Colt Borg`,
   },
   plugins: [
     {

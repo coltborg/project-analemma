@@ -16,9 +16,10 @@ function SEO({ description, lang, meta, keywords, title }) {
       query {
         site {
           siteMetadata {
-            title
-            description
             author
+            description
+            shareImage
+            title
           }
         }
       }
@@ -40,6 +41,10 @@ function SEO({ description, lang, meta, keywords, title }) {
           content: metaDescription,
         },
         {
+          name: `image`,
+          content: site.siteMetadata.shareImage,
+        },
+        {
           property: `og:title`,
           content: title,
         },
@@ -50,6 +55,10 @@ function SEO({ description, lang, meta, keywords, title }) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: site.siteMetadata.shareImage,
         },
         {
           name: `twitter:card`,
@@ -66,6 +75,10 @@ function SEO({ description, lang, meta, keywords, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: site.siteMetadata.shareImage,
         },
       ]
         .concat(
