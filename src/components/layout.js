@@ -10,6 +10,7 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
+import SEO from './seo'
 // import './layout.css'
 import '../styles/styles.css'
 
@@ -26,9 +27,10 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+        <SEO lang="en" htmlClassNames="font-iAWriter bg-green" />
         <Header siteTitle={data.site.siteMetadata.title} />
-        <main>{children}</main>
-        <footer>
+        <main style={{ border: '3px dotted goldenrod' }}>{children}</main>
+        <footer style={{ border: '3px dotted salmon' }}>
           <a
             target="_blank"
             rel="noopener noreferrer"
