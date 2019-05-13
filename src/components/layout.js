@@ -8,6 +8,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
+import { SkipNavLink, SkipNavContent } from '@reach/skip-nav'
 
 import Header from './header'
 import SEO from './seo'
@@ -28,7 +29,9 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <SEO lang="en" htmlClassNames="font-iAWriter bg-green" />
+        <SkipNavLink />
         <Header siteTitle={data.site.siteMetadata.title} />
+        <SkipNavContent />
         <main style={{ border: '3px dotted goldenrod' }}>{children}</main>
         <footer style={{ border: '3px dotted salmon' }}>
           <a
