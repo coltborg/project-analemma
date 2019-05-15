@@ -22,6 +22,7 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+            titleInitials
           }
         }
       }
@@ -30,7 +31,10 @@ const Layout = ({ children }) => (
       <>
         <SEO lang="en" htmlClassNames="font-iAWriter bg-green" />
         <SkipNavLink />
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header
+          siteTitle={data.site.siteMetadata.title}
+          siteTitleInitials={data.site.siteMetadata.titleInitials}
+        />
         <SkipNavContent />
         <main style={{ border: '3px dotted goldenrod' }}>{children}</main>
         <footer style={{ border: '3px dotted salmon' }}>

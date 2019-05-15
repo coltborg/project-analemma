@@ -6,19 +6,20 @@ module.exports = {
     colors: {
       transparent: 'transparent',
 
-      black: '#000',
+      'oled-black': '#000',
+      black: '#1F2933',
       white: '#fff',
 
       gray: {
-        100: '#f7fafc',
-        200: '#edf2f7',
-        300: '#e2e8f0',
-        400: '#cbd5e0',
-        500: '#a0aec0',
-        600: '#718096',
-        700: '#4a5568',
-        800: '#2d3748',
-        900: '#1a202c',
+        100: '#F5F7FA',
+        200: '#E4E7EB',
+        300: '#CBD2D9',
+        400: '#9AA5B1',
+        500: '#7B8794',
+        600: '#616E7C',
+        700: '#52606D',
+        800: '#3E4C59',
+        900: '#323F4B',
       },
       red: {
         100: '#fff5f5',
@@ -123,32 +124,33 @@ module.exports = {
     spacing: {
       px: '1px',
       '0': '0',
-      '1': '0.25rem',
-      '2': '0.5rem',
-      '3': '0.75rem',
-      '4': '1rem',
-      '5': '1.25rem',
-      '6': '1.5rem',
-      '8': '2rem',
-      '10': '2.5rem',
-      '12': '3rem',
-      '16': '4rem',
-      '20': '5rem',
-      '24': '6rem',
-      '32': '8rem',
-      '40': '10rem',
-      '48': '12rem',
-      '56': '14rem',
-      '64': '16rem',
+      '1': '0.25rem', // 4px
+      '2': '0.5rem', // 8px
+      '3': '0.75rem', // 12px
+      '4': '1rem', // 16px
+      '5': '1.25rem', // 20px
+      '6': '1.5rem', // 24px
+      '8': '2rem', // 32px
+      '10': '2.5rem', // 40px
+      '12': '3rem', // 48px
+      '16': '4rem', // 64px
+      '20': '5rem', // 80px
+      '24': '6rem', // 96px
+      '32': '8rem', // 128px
+      '40': '10rem', // 160px
+      '48': '12rem', // 160px
+      '56': '14rem', // 224px
+      '64': '16rem', // 1024px
     },
     screens: {
       sm: '640px',
       md: '768px',
       lg: '1024px',
       xl: '1280px',
+      hd: '1920px',
     },
     fontFamily: {
-      iAWriter: ['iA Writer Duospace', 'monospace'],
+      'ia-writer': ['iA Writer Duospace', 'monospace'],
       sans: [
         '-apple-system',
         'BlinkMacSystemFont',
@@ -174,16 +176,16 @@ module.exports = {
       ],
     },
     fontSize: {
-      xs: '0.75rem',
-      sm: '0.875rem',
-      base: '1rem',
-      lg: '1.125rem',
-      xl: '1.25rem',
-      '2xl': '1.5rem',
-      '3xl': '1.875rem',
-      '4xl': '2.25rem',
-      '5xl': '3rem',
-      '6xl': '4rem',
+      xs: '0.75rem', // 12px
+      sm: '0.875rem', // 14px
+      base: '1rem', // 16px
+      lg: '1.125rem', // 18px
+      xl: '1.25rem', // 20px
+      '2xl': '1.5rem', // 24px
+      '3xl': '1.875rem', // 30px
+      '4xl': '2.25rem', // 36px
+      '5xl': '3rem', // 48px
+      '6xl': '4rem', // 64px
     },
     fontWeight: {
       hairline: '100',

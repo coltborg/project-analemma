@@ -1,6 +1,29 @@
 /* Custom Base
 ========================================================================== */
 
+/* A11y
+====================================== */
+@responsive {
+  .visually-hidden {
+    /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px; width: 1px;
+    overflow: hidden;
+    position: absolute !important;
+  }
+
+  .visually-hidden-reset {
+    clip: initial;
+    height: initial; width: initial;
+    overflow: initial;
+    position: initial !important;
+  }
+}
+
+/* Reach UI
+====================================== */
+
 [data-reach-skip-link] {
   border: 0;
   clip: rect(0 0 0 0);

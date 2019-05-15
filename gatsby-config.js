@@ -4,7 +4,8 @@ module.exports = {
     description: `Colt Borg is a frontend developer, learning in public.`,
     shareImage: `/images/coltborg-share.png`,
     title: `Colt Borg`,
-    htmlClasses: `font-iAWriter text-gray-900 antialiased leading-normal`,
+    titleInitials: `CB`,
+    htmlClasses: `font-ia-writer text-xl sm:text-lg hd:text-xl text-gray-900 antialiased leading-normal`,
     bodyClasses: `min-h-screen bg-gray-100`,
   },
   plugins: [
