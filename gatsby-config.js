@@ -5,7 +5,7 @@ module.exports = {
     shareImage: `/images/coltborg-share.png`,
     title: `Colt Borg`,
     titleInitials: `CB`,
-    htmlClasses: `font-ia-writer text-xl sm:text-lg hd:text-xl text-gray-900 antialiased leading-normal`,
+    htmlClasses: `font-ia-writer text-lg md:text-xl text-gray-900 antialiased leading-normal`,
     bodyClasses: `min-h-screen bg-gray-100`,
   },
   plugins: [

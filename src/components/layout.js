@@ -36,7 +36,7 @@ const Layout = ({ children }) => (
           siteTitleInitials={data.site.siteMetadata.titleInitials}
         />
         <SkipNavContent />
-        <main style={{ border: '3px dotted goldenrod' }}>{children}</main>
+        <main>{children}</main>
         <footer style={{ border: '3px dotted salmon' }}>
           <a
             target="_blank"

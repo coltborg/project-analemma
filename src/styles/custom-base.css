@@ -1,6 +1,43 @@
 /* Custom Base
 ========================================================================== */
 
+/* Code
+====================================== */
+code {
+  @apply p-1 rounded bg-gray-200
+}
+
+/* Grid
+====================================== */
+.grid-article {
+  display: grid;
+  grid-template-columns:
+    minmax(theme('spacing.1'), 1fr)
+    minmax(auto, 54ch)
+    minmax(theme('spacing.1'), 1fr);
+}
+
+.grid-article pre {
+  grid-column: 1 / 4;
+  width: 100%;
+  max-width: 100ch;
+  justify-self: center;
+}
+
+.grid-article * {
+  grid-column: 2;
+}
+
+/* Icons
+====================================== */
+.icon-primary {
+  fill: #3E4C59;
+}
+
+.icon-secondary {
+  fill: #CBD2D9;
+}
+
 /* A11y
 ====================================== */
 @responsive {

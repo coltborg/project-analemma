@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 const Header = ({ siteTitle, siteTitleInitials }) => (
-  <header className="border-t-4 border-gray-900">
+  <header className="mb-12 border-t-4 border-gray-900">
     <nav>
       <ul className="mx-2 md:mx-3 text-lg md:text-xl hd flex items-center">
         <li className="flex-grow">
@@ -19,10 +19,30 @@ const Header = ({ siteTitle, siteTitleInitials }) => (
           </h1>
         </li>
         <li className="mr-4">
-          <Link to="/uses">Uses</Link>
-        </li>
-        <li>
-          <button type="button">Dark</button>
+          <Link
+            to="/uses"
+            className="flex items-center text-green-200 hover:text-green-300 hover:underline"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="w-5 sm:w-4 mr-1 icon-code"
+            >
+              <rect
+                width="18"
+                height="18"
+                x="3"
+                y="3"
+                className="icon-primary"
+                rx="2"
+              />
+              <path
+                className="icon-secondary"
+                d="M8.7 13.3a1 1 0 0 1-1.4 1.4l-2-2a1 1 0 0 1 0-1.4l2-2a1 1 0 1 1 1.4 1.4L7.42 12l1.3 1.3zm6.6 0l1.29-1.3-1.3-1.3a1 1 0 1 1 1.42-1.4l2 2a1 1 0 0 1 0 1.4l-2 2a1 1 0 0 1-1.42-1.4zm-3.32 3.9a1 1 0 0 1-1.96-.4l2-10a1 1 0 0 1 1.96.4l-2 10z"
+              />
+            </svg>
+            <span>Uses</span>
+          </Link>
         </li>
       </ul>
     </nav>

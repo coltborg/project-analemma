@@ -5,6 +5,7 @@ import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 
 import Layout from './layout'
 import SEO from './seo'
+import { H1 } from './designSystem'
 
 const articleLayout = ({ data: { mdx } }) => {
   const { frontmatter } = mdx
@@ -18,23 +19,24 @@ const articleLayout = ({ data: { mdx } }) => {
         keywords={frontmatter.keywords}
         description={frontmatter.description}
       />
-      <header style={{ border: '3px dotted purple' }}>
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
-        <h3>Categories</h3>
-        <ul>
+      <header className="mb-10 grid-article">
+        <H1>{frontmatter.title}</H1>
+        <span className="text-sm">{frontmatter.date}</span>
+        {/* <span>Categories</span>
+        <ul className="mb-2 text-xs flex flex-wrap">
           {frontmatter.categories.map(category => (
-            <li key={category}>{category}</li>
+            <li
+              className="p-1 mr-1 bg-gray-700 text-gray-200 rounded"
+              key={category}
+            >
+              {category}
+            </li>
           ))}
-        </ul>
-        <h3>Keywords</h3>
-        <ul>
-          {frontmatter.keywords.map(keyword => (
-            <li key={keyword}>{keyword}</li>
-          ))}
-        </ul>
+        </ul> */}
       </header>
-      <MDXRenderer>{body}</MDXRenderer>
+      <article className="grid-article">
+        <MDXRenderer>{body}</MDXRenderer>
+      </article>
     </Layout>
   )
 }
