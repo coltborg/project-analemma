@@ -37,32 +37,36 @@ const Layout = ({ children }) => (
         />
         <SkipNavContent />
         <main>{children}</main>
-        <footer style={{ border: '3px dotted salmon' }}>
+        <footer className="px-1 py-4 bg-green-200 flex flex-col sm:flex-row items-center justify-center">
           <a
+            className="mb-2 sm:mb-0 mr-4 text-green-900 underline"
             target="_blank"
             rel="noopener noreferrer"
             href="https://twitter.com/coltborg"
           >
             Twitter
-          </a>{' '}
-          /{' '}
+          </a>
+          <span className="mb-2 sm:mb-0 mr-4">/</span>
           <a
+            className="mb-2 sm:mb-0 mr-4 text-green-900 underline"
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.instagram.com/coltborg/"
           >
             Instagram
-          </a>{' '}
-          /{' '}
+          </a>
+          <span className="mb-2 sm:mb-0 mr-4">/</span>
           <a
+            className="mb-2 sm:mb-0 mr-4 text-green-900 underline"
             target="_blank"
             rel="noopener noreferrer"
             href="https://github.com/coltborg"
           >
             Github
-          </a>{' '}
-          /{' '}
+          </a>
+          <span className="mb-2 sm:mb-0 mr-4">/</span>
           <a
+            className="mb-2 sm:mb-0 mr-4 text-green-900 underline"
             target="_blank"
             rel="noopener noreferrer"
             href="https://codepen.io/coltborg/"

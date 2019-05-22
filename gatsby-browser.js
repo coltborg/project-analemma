@@ -36,11 +36,7 @@ const components = {
   p: ({ children, ...rest }) => <P {...rest}>{children}</P>,
   ul: ({ children, ...rest }) => <UL {...rest}>{children}</UL>,
   a: ({ children, href, ...rest }) => (
-    <a
-      href={href}
-      className="text-green-700 hover:text-green-800 hover:underline"
-      {...rest}
-    >
+    <a href={href} className="text-green-900 underline" {...rest}>
       {children}
     </a>
   ),

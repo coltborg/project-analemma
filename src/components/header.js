@@ -21,12 +21,14 @@ const Header = ({ siteTitle, siteTitleInitials }) => (
         <li className="">
           <Link
             to="/uses"
-            className="flex items-center text-green-700 hover:text-green-800 hover:underline"
+            className="flex items-center text-green-900 underline"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               className="w-5 sm:w-4 mr-1 icon-code"
+              width="16"
+              height="16"
             >
               <rect
                 width="18"
