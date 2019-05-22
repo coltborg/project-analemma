@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 const Header = ({ siteTitle, siteTitleInitials }) => (
-  <header className="mb-12 border-t-4 border-gray-900">
+  <header className="px-1 mb-12 border-t-4 border-gray-900">
     <nav>
-      <ul className="mx-2 md:mx-3 text-lg md:text-xl hd flex items-center">
+      <ul className="text-lg md:text-xl hd flex items-center">
         <li className="flex-grow">
           <h1 className="text-2xl md:text-3xl lg:text-4xl hd:text-5xl">
             <Link to="/">
@@ -18,10 +18,10 @@ const Header = ({ siteTitle, siteTitleInitials }) => (
             </Link>
           </h1>
         </li>
-        <li className="mr-4">
+        <li className="">
           <Link
             to="/uses"
-            className="flex items-center text-green-200 hover:text-green-300 hover:underline"
+            className="flex items-center text-green-700 hover:text-green-800 hover:underline"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
