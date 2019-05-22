@@ -13,7 +13,7 @@ code {
   display: grid;
   grid-template-columns:
     minmax(theme('spacing.1'), 1fr)
-    minmax(auto, 54ch)
+    minmax(auto, 63ch)
     minmax(theme('spacing.1'), 1fr);
 }
 
