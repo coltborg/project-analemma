@@ -9,7 +9,7 @@ code {
 
 /* Grid
 ====================================== */
-.grid-article {
+.grid {
   display: grid;
   grid-template-columns:
     minmax(theme('spacing.1'), 1fr)
@@ -17,14 +17,14 @@ code {
     minmax(theme('spacing.1'), 1fr);
 }
 
-.grid-article pre {
+.grid pre {
   grid-column: 1 / 4;
   width: 100%;
   max-width: 100ch;
   justify-self: center;
 }
 
-.grid-article * {
+.grid * {
   grid-column: 2;
 }
 
