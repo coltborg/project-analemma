@@ -19,7 +19,7 @@ const articleLayout = ({ data: { mdx } }) => {
         keywords={frontmatter.keywords}
         description={frontmatter.description}
       />
-      <header className="mb-10 grid-article">
+      <header className="grid-article">
         <H1>{frontmatter.title}</H1>
         <span className="text-sm">{frontmatter.date}</span>
         {/* <span>Categories</span>

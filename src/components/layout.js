@@ -36,7 +36,9 @@ const Layout = ({ children, applyGrid }) => (
           siteTitleInitials={data.site.siteMetadata.titleInitials}
         />
         <SkipNavContent />
-        <main className={applyGrid ? `grid-article` : ``}>{children}</main>
+        <main className={`mb-10 ${applyGrid ? 'grid-article' : ''}`}>
+          {children}
+        </main>
         <Footer />
       </>
     )}
