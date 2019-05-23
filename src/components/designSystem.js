@@ -14,7 +14,7 @@ export const H1 = ({ children, className, ...rest }) => (
 )
 
 H1.propTypes = {
-  children: PropTypes.array,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   className: PropTypes.string,
 }
 
@@ -29,7 +29,7 @@ export const H2 = ({ children, className, ...rest }) => (
 )
 
 H2.propTypes = {
-  children: PropTypes.array,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   className: PropTypes.string,
 }
 
@@ -44,7 +44,7 @@ export const H3 = ({ children, className, ...rest }) => (
 )
 
 H3.propTypes = {
-  children: PropTypes.array,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   className: PropTypes.string,
 }
 
@@ -55,7 +55,11 @@ export const P = ({ children, className, ...rest }) => (
 )
 
 P.propTypes = {
-  children: PropTypes.array,
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.array,
+    PropTypes.element,
+  ]),
   className: PropTypes.string,
 }
 
@@ -69,7 +73,11 @@ export const UL = ({ children, className, ...rest }) => (
 )
 
 UL.propTypes = {
-  children: PropTypes.array,
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.array,
+    PropTypes.element,
+  ]),
   className: PropTypes.string,
 }
 
@@ -80,7 +88,7 @@ export const CODE = ({ children, className, ...rest }) => (
 )
 
 CODE.propTypes = {
-  children: PropTypes.array,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   className: PropTypes.string,
 }
 

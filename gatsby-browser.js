@@ -112,11 +112,19 @@ components.h6.propTypes = {
 }
 
 components.p.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.array,
+    PropTypes.element,
+  ]),
 }
 
 components.ul.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.array,
+    PropTypes.element,
+  ]),
 }
 
 components.a.propTypes = {
