@@ -1,6 +1,6 @@
-import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
 import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
 
 const Header = ({ siteTitle, siteTitleInitials }) => (
   <header className="px-1 mb-12 border-t-4 border-gray-900">

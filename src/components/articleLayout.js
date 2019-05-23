@@ -34,7 +34,7 @@ const articleLayout = ({ data: { mdx } }) => {
           ))}
         </ul> */}
       </header>
-      <article className="grid-article">
+      <article className="mb-12 grid-article">
         <MDXRenderer>{body}</MDXRenderer>
       </article>
     </Layout>
