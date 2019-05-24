@@ -1,25 +1,7 @@
 import React from 'react'
 
 const Footer = () => (
-  <footer className="px-1 py-4 bg-green-200 flex flex-col sm:flex-row items-center justify-center">
-    <a
-      className="mb-2 sm:mb-0 mr-4 text-green-900 underline"
-      target="_blank"
-      rel="noopener noreferrer"
-      href="https://twitter.com/coltborg"
-    >
-      Twitter
-    </a>
-    <span className="mb-2 sm:mb-0 mr-4">/</span>
-    <a
-      className="mb-2 sm:mb-0 mr-4 text-green-900 underline"
-      target="_blank"
-      rel="noopener noreferrer"
-      href="https://www.instagram.com/coltborg/"
-    >
-      Instagram
-    </a>
-    <span className="mb-2 sm:mb-0 mr-4">/</span>
+  <footer className="px-1 py-2 text-xs bg-green-200 flex flex-col sm:flex-row items-center justify-center">
     <a
       className="mb-2 sm:mb-0 mr-4 text-green-900 underline"
       target="_blank"
@@ -37,7 +19,24 @@ const Footer = () => (
     >
       CodePen
     </a>
-    <div>© {new Date().getFullYear()}</div>
+    <span className="mb-2 sm:mb-0 mr-4">/</span>
+    <a
+      className="mb-2 sm:mb-0 mr-4 text-green-900 underline"
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://twitter.com/coltborg"
+    >
+      Twitter
+    </a>
+    <span className="mb-2 sm:mb-0 mr-4">/</span>
+    <a
+      className="mb-2 sm:mb-0 mr-4 text-green-900 underline"
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://www.instagram.com/coltborg/"
+    >
+      Instagram
+    </a>
   </footer>
 )
 
