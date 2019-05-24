@@ -6,7 +6,7 @@ const Header = ({ siteTitle, siteTitleInitials }) => (
   <header className="px-1 mb-12 border-t-4 border-gray-900">
     <nav>
       <ul className="text-lg md:text-xl hd flex items-baseline">
-        <li className="flex-grow sm:flex-grow-0 sm:mr-8">
+        <li className="flex-grow">
           <h1 className="text-2xl md:text-3xl lg:text-4xl hd:text-5xl">
             <Link to="/">
               <span className="visually-hidden sm:visually-hidden-reset">
@@ -17,14 +17,6 @@ const Header = ({ siteTitle, siteTitleInitials }) => (
               </span>
             </Link>
           </h1>
-        </li>
-        <li className="">
-          <Link
-            to="/uses"
-            className="flex items-center text-green-900 underline"
-          >
-            <span>Uses</span>
-          </Link>
         </li>
       </ul>
     </nav>
