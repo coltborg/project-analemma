@@ -3,6 +3,7 @@ import Proptypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
+import ListItem from '../components/listItem'
 import SEO from '../components/seo'
 
 const IndexPage = ({
@@ -19,20 +20,42 @@ const IndexPage = ({
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     {articles.length > 0 && (
       <>
-        <h2 className="my-6 text-xl md:text-2xl lg:text-3xl font-bold leading-tight ">
+        <h2 className="my-6 text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
           Articles
         </h2>
         <ul>
-          {articles.map(({ node: article }) => (
-            <li
-              key={article.id}
-              className="mb-2 rounded bg-gray-200 flex flex-col hover:bg-green-300"
-            >
-              <Link to={article.frontmatter.slug} className="p-2">
-                {article.frontmatter.title}
-              </Link>
-            </li>
-          ))}
+          {articles.map(
+            ({
+              node: article,
+              node: {
+                frontmatter: { description },
+              },
+              node: {
+                frontmatter: { emoji },
+              },
+              node: {
+                frontmatter: { slug },
+              },
+              node: {
+                frontmatter: { title },
+              },
+            }) => (
+              <ListItem key={article.id}>
+                <Link to={slug} className="p-2 flex items-center">
+                  <div
+                    className="mr-2 text-2xl hidden sm:block"
+                    aria-hidden="true"
+                  >
+                    {emoji}
+                  </div>
+                  <div>
+                    <div className="text-lg font-bold">{title}</div>
+                    <div className="text-sm">{description}</div>
+                  </div>
+                </Link>
+              </ListItem>
+            )
+          )}
         </ul>
       </>
     )}
@@ -43,10 +66,7 @@ const IndexPage = ({
         </h2>
         <ul>
           {speakingList.map(({ title, url }) => (
-            <li
-              key={title}
-              className="mb-2 rounded bg-gray-200 flex flex-col hover:bg-green-300"
-            >
+            <ListItem key={title}>
               <a
                 className="p-2"
                 target="_blank"
@@ -55,7 +75,7 @@ const IndexPage = ({
               >
                 {title}
               </a>
-            </li>
+            </ListItem>
           ))}
         </ul>
       </>
@@ -74,6 +94,8 @@ export const pageQuery = graphql`
         node {
           id
           frontmatter {
+            description
+            emoji
             title
             slug
           }

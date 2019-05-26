@@ -1,10 +1,30 @@
 /* Custom Base
 ========================================================================== */
 
+/* Focus
+====================================== */
+a:focus {
+  @apply outline-none shadow-outline
+}
+
+/* Transition
+====================================== */
+.trans-color {
+  transition:
+    background-color 100ms linear,
+    color 100ms linear,
+    border-color 100ms linear;
+}
+
+/* Selection
+====================================== */
+::-moz-selection { background: var(--primary-100); }
+::selection { background: var(--primary-100); }
+
 /* Code
 ====================================== */
 code {
-  @apply p-1 rounded bg-gray-200
+  @apply p-1 rounded bg-neutral-100 text-neutral-700
 }
 
 /* Grid
@@ -73,11 +93,12 @@ code {
 }
 
 [data-reach-skip-link]:focus {
-  padding: 1rem;
+  padding: theme('spacing.2');
   position: fixed;
-  top: 10px;
-  left: 10px;
-  background: #fff;
+  top: theme('spacing.3');
+  left: theme('spacing.3');
+  background: theme('colors.primary.100');
+  color: theme('colors.primary.900');
   z-index: 1;
   width: auto;
   height: auto;

@@ -26,7 +26,7 @@ const articleLayout = ({ data: { mdx } }) => {
         <ul className="mb-2 text-xs flex flex-wrap">
           {frontmatter.categories.map(category => (
             <li
-              className="p-1 mr-1 bg-gray-700 text-gray-200 rounded"
+              className="p-1 mr-1 rounded"
               key={category}
             >
               {category}

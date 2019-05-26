@@ -5,8 +5,8 @@ module.exports = {
     shareImage: `/images/coltborg-share.png`,
     title: `Colt Borg`,
     titleInitials: `CB`,
-    htmlClasses: `font-ia-writer text-lg md:text-xl text-gray-900 antialiased leading-normal`,
-    bodyClasses: `min-h-screen bg-gray-100`,
+    htmlClasses: `font-ia-writer text-lg md:text-xl text-neutral-900 antialiased leading-normal`,
+    bodyClasses: `min-h-screen bg-neutral-50`,
     speakingList: [
       {
         date: `10/23/2018`,

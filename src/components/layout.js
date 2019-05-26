@@ -30,7 +30,12 @@ const Layout = ({ children, applyGrid }) => (
     render={data => (
       <>
         <SEO lang="en" />
-        <SkipNavLink />
+        <SkipNavLink>
+          <span className="mr-2" aria-hidden="true">
+            👉
+          </span>
+          Skip to content
+        </SkipNavLink>
         <Header
           siteTitle={data.site.siteMetadata.title}
           siteTitleInitials={data.site.siteMetadata.titleInitials}
