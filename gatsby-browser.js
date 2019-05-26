@@ -36,7 +36,7 @@ const components = {
   p: ({ children, ...rest }) => <P {...rest}>{children}</P>,
   ul: ({ children, ...rest }) => <UL {...rest}>{children}</UL>,
   a: ({ children, href, ...rest }) => (
-    <a href={href} className="text-green-900 underline" {...rest}>
+    <a href={href} target="_blank" rel="noopener noreferrer" {...rest}>
       {children}
     </a>
   ),

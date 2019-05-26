@@ -35,18 +35,10 @@ module.exports = {
         50: 'var(--primary-50)',
       },
 
-      // secondary: {
-      //   0: 'var(--secondary-0)',
-      //   100: 'var(--secondary-100)',
-      //   200: 'var(--secondary-200)',
-      //   300: 'var(--secondary-300)',
-      //   400: 'var(--secondary-400)',
-      //   500: 'var(--secondary-500)',
-      //   600: 'var(--secondary-600)',
-      //   700: 'var(--secondary-700)',
-      //   800: 'var(--secondary-800)',
-      //   900: 'var(--secondary-900)',
-      // },
+      secondary: {
+        900: 'var(--secondary-900)',
+        100: 'var(--secondary-100)',
+      },
     },
     spacing: {
       px: '1px',

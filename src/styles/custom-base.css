@@ -1,10 +1,31 @@
 /* Custom Base
 ========================================================================== */
 
-/* Focus
+/* Links
 ====================================== */
 a:focus {
   @apply outline-none shadow-outline
+}
+
+.article a {
+  @apply bg-primary-100 text-primary-900 border-b border-primary-900
+}
+
+.footer a {
+  @apply text-primary-900 border-b border-primary-900
+}
+
+.article a:visited {
+  @apply bg-secondary-100 text-secondary-900 border-b border-secondary-900
+}
+
+.footer a:visited {
+  @apply bg-secondary-100 text-secondary-900 border-b border-secondary-900
+}
+
+.article a:active,
+.footer a:active {
+  @apply border-b-2 font-bold
 }
 
 /* Transition
@@ -48,16 +69,6 @@ code {
   grid-column: 2;
 }
 
-/* Icons
-====================================== */
-.icon-primary {
-  fill: #3E4C59;
-}
-
-.icon-secondary {
-  fill: #CBD2D9;
-}
-
 /* A11y
 ====================================== */
 @responsive {
@@ -80,7 +91,6 @@ code {
 
 /* Reach UI
 ====================================== */
-
 [data-reach-skip-link] {
   border: 0;
   clip: rect(0 0 0 0);

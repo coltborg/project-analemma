@@ -68,7 +68,7 @@ const articleLayout = ({
           ))}
         </ul> */}
     </header>
-    <article className="mb-12 grid">
+    <article className="mb-12 grid article">
       <MDXRenderer>{body}</MDXRenderer>
     </article>
   </Layout>

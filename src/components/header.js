@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
 const Header = ({ siteTitle, siteTitleInitials }) => (
-  <header className="px-1 md:mb-6 border-t-4 border-neutral-900">
+  <header className="px-1 md:mb-6 border-t-4 border-primary-400">
     <nav>
       <ul className="text-lg md:text-xl hd flex items-baseline">
         <li className="flex-grow">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl hd:text-5xl">
+          <h1 className="text-3xl lg:text-4xl hd:text-5xl">
             <Link to="/">
               <span className="visually-hidden sm:visually-hidden-reset">
                 {siteTitle}

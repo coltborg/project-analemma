@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Footer = () => (
-  <footer className="px-1 py-2 text-xs flex items-center justify-center">
+  <footer className="px-1 py-2 text-xs flex items-center justify-center footer">
     <a
       className="mr-1 sm:mr-4"
       target="_blank"
