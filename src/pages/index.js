@@ -7,7 +7,7 @@ import ListItem from '../components/listItem'
 import SEO from '../components/seo'
 
 const quotes = [
-  { quote: 'I trust him.', person: 'NickD', url: 'https://draft.nu/' },
+  { quote: 'I trust him.', person: 'nickD', url: 'https://draft.nu/' },
 ]
 
 const IndexPage = ({
