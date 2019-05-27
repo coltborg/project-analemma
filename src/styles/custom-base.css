@@ -7,7 +7,8 @@ a:focus {
   @apply outline-none shadow-outline
 }
 
-.article a {
+.article a,
+.not-found a {
   @apply bg-primary-100 text-primary-900 border-b border-primary-900
 }
 
@@ -29,7 +30,8 @@ a:focus {
 
 .article a:active,
 .footer a:active,
-.quote a:active {
+.quote a:active,
+.not-found a:active {
   @apply border-b-2 font-bold
 }
 
