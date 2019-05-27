@@ -1,3 +1,4 @@
+/* eslint-disable */
 // @flow
 // Converted automatically using ./tools/themeFromVsCode
 
@@ -33,7 +34,7 @@ var theme /*: PrismTheme */ = {
         "attr-name"
       ],
       "style": {
-        "color": "rgb(72, 118, 214)",
+        "color": "rgb(63, 112, 213)",
         "fontStyle": "italic"
       }
     },
@@ -42,7 +43,7 @@ var theme /*: PrismTheme */ = {
         "comment"
       ],
       "style": {
-        "color": "rgb(152, 159, 177)",
+        "color": "rgb(107, 116, 141)",
         "fontStyle": "italic"
       }
     },
@@ -55,7 +56,7 @@ var theme /*: PrismTheme */ = {
         "url"
       ],
       "style": {
-        "color": "rgb(72, 118, 214)"
+        "color": "rgb(63, 112, 213)"
       }
     },
     {
@@ -110,7 +111,7 @@ var theme /*: PrismTheme */ = {
         "namespace"
       ],
       "style": {
-        "color": "rgb(12, 150, 155)"
+        "color": "rgb(18, 129, 133)"
       }
     },
     {
@@ -118,7 +119,7 @@ var theme /*: PrismTheme */ = {
         "boolean"
       ],
       "style": {
-        "color": "rgb(188, 84, 84)"
+        "color": "rgb(187, 83, 83)"
       }
     }
   ]
