@@ -35,7 +35,6 @@ function SEO({ description, keywords, lang, meta, title }) {
             bodyClasses
             description
             htmlClasses
-            shareImage
             title
           }
         }
