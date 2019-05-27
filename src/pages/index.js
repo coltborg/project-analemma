@@ -18,7 +18,16 @@ const IndexPage = ({
   },
 }) => (
   <Layout applyGrid>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="Home"
+      keywords={[
+        'Colt Borg',
+        'web development',
+        'web design',
+        'frontend development',
+        'vuejs',
+      ]}
+    />
     {articles.length > 0 && (
       <>
         <h2 className="my-6 text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
