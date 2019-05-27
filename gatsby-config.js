@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     author: `@coltborg`,
     description: `Colt Borg is a frontend developer, learning in public.`,
-    shareImage: `/images/coltborg-share.png`,
+    shareImage: `src/images/coltborg-share.png`,
     title: `Colt Borg`,
     titleInitials: `CB`,
     htmlClasses: `font-ia-writer text-lg md:text-xl text-neutral-900 antialiased leading-normal`,
