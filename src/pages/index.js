@@ -6,6 +6,10 @@ import Layout from '../components/layout'
 import ListItem from '../components/listItem'
 import SEO from '../components/seo'
 
+const quotes = [
+  { quote: 'I trust him.', person: 'NickD', url: 'https://draft.nu/' },
+]
+
 const IndexPage = ({
   data: {
     allMdx: { edges: articles },
@@ -76,6 +80,25 @@ const IndexPage = ({
                 {title}
               </a>
             </ListItem>
+          ))}
+        </ul>
+      </>
+    )}
+    {quotes.length > 0 && (
+      <>
+        <h2 className="my-6 text-xl md:text-2xl lg:text-3xl font-bold leading-tight ">
+          From Other People
+        </h2>
+        <ul>
+          {quotes.map(({ quote, person, url }) => (
+            <li key={url}>
+              <blockquote className="p-4 bg-neutral-100 text-neutral-600 border-l-4 border-neutral-500 italic quote">
+                <p className="mb-2">"{quote}"</p>
+                <cite>
+                  - <a href={url}>{person}</a>
+                </cite>
+              </blockquote>
+            </li>
           ))}
         </ul>
       </>

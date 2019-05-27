@@ -15,6 +15,10 @@ a:focus {
   @apply text-primary-900 border-b border-primary-900
 }
 
+.quote a {
+  @apply text-neutral-600 border-b border-neutral-600
+}
+
 .article a:visited {
   @apply bg-secondary-100 text-secondary-900 border-b border-secondary-900
 }
@@ -24,7 +28,8 @@ a:focus {
 }
 
 .article a:active,
-.footer a:active {
+.footer a:active,
+.quote a:active {
   @apply border-b-2 font-bold
 }
 
