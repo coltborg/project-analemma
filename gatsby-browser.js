@@ -11,9 +11,7 @@ import Hightlight, { defaultProps } from 'prism-react-renderer'
 import theme from './src/styles/customNightOwl'
 import { H1, H2, H3, P, UL } from './src/components/designSystem'
 
-// TODO: temp component, get rid of!
 const components = {
-  // TODO: Maybe I don't need to define wrapper anymore? Could have been fixed by Gatsby team
   wrapper: ({ children }) => <>{children}</>,
   h1: ({ children, ...rest }) => <H1 {...rest}>{children}</H1>,
   h2: ({ children, ...rest }) => <H2 {...rest}>{children}</H2>,

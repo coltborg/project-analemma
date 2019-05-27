@@ -7,38 +7,6 @@ module.exports = {
     titleInitials: `CB`,
     htmlClasses: `font-ia-writer text-lg md:text-xl text-neutral-900 antialiased leading-normal`,
     bodyClasses: `min-h-screen bg-neutral-50`,
-    speakingList: [
-      {
-        date: `10/23/2018`,
-        title: `CodePen Chicago: October 2018`,
-        url: `https://codepen.io/brianmontanaweb/post/codepen-chicago-october-23rd-2018-at-backstop-solutions#colt-borg-6`,
-      },
-      {
-        date: `10/15/2018`,
-        title: `Reusable Vue.js Components: Slots, Scoped Slots, and Render Function`,
-        url: `https://www.meetup.com/Chicago-Vue-js/events/255105052/`,
-      },
-      {
-        date: `5/30/2018`,
-        title: `CodePen Chicago: May 2018`,
-        url: `https://codepen.io/brianmontanaweb/post/codepen-chicago-may-30th-2018-sprout-social#colt-borg-6`,
-      },
-      {
-        date: `1/19/2017`,
-        title: `Jekyll: Static Sites on Steroids`,
-        url: `https://irl.chicagofriends.website/archive.html`,
-      },
-      {
-        date: `10/31/2016`,
-        title: `CodePen Chicago: October 2016 `,
-        url: `https://codepen.io/poopsplat/post/codepen-chicago-october-2016#colt-borg-1`,
-      },
-      {
-        date: `8/26/2016`,
-        title: `CodePen Chicago: August 2016`,
-        url: `https://codepen.io/poopsplat/post/codepen-chicago-august-2016#colt-borg-8`,
-      },
-    ],
   },
   plugins: [
     {
@@ -75,6 +43,14 @@ module.exports = {
           require('postcss-custom-properties')(),
           require('autoprefixer')(),
         ],
+      },
+    },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data`,
       },
     },
     {

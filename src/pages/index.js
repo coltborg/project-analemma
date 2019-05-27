@@ -6,18 +6,15 @@ import Layout from '../components/layout'
 import ListItem from '../components/listItem'
 import SEO from '../components/seo'
 
-const quotes = [
-  { quote: 'I trust him.', person: 'nickd', url: 'https://draft.nu/' },
-]
-
 const IndexPage = ({
   data: {
     allMdx: { edges: articles },
   },
   data: {
-    site: {
-      siteMetadata: { speakingList },
-    },
+    allQuotesJson: { edges: quotes },
+  },
+  data: {
+    allSpeakingListJson: { edges: speakingList },
   },
 }) => (
   <Layout applyGrid>
@@ -69,7 +66,7 @@ const IndexPage = ({
           Speaking
         </h2>
         <ul>
-          {speakingList.map(({ title, url }) => (
+          {speakingList.map(({ node: { title }, node: { url } }) => (
             <ListItem key={title}>
               <a
                 className="p-2"
@@ -90,16 +87,26 @@ const IndexPage = ({
           From Other People
         </h2>
         <ul>
-          {quotes.map(({ quote, person, url }) => (
-            <li key={url}>
-              <blockquote className="p-4 bg-neutral-100 text-neutral-600 border-l-4 border-neutral-500 italic quote">
-                <p className="mb-2">"{quote}"</p>
-                <cite>
-                  - <a href={url}>{person}</a>
-                </cite>
-              </blockquote>
-            </li>
-          ))}
+          {quotes.map(
+            ({
+              node: { id },
+              node: { person },
+              node: { quote },
+              node: { url },
+            }) => (
+              <li key={id} className="mb-2">
+                <blockquote className="p-4 bg-neutral-100 text-neutral-600 border-l-4 border-neutral-500 italic quote">
+                  <p className="mb-2">"{quote}"</p>
+                  <cite>
+                    -{' '}
+                    <a href={url} target="_blank" rel="noopener noreferrer">
+                      {person}
+                    </a>
+                  </cite>
+                </blockquote>
+              </li>
+            )
+          )}
         </ul>
       </>
     )}
@@ -125,9 +132,20 @@ export const pageQuery = graphql`
         }
       }
     }
-    site {
-      siteMetadata {
-        speakingList {
+    allQuotesJson {
+      edges {
+        node {
+          id
+          person
+          quote
+          url
+        }
+      }
+    }
+    allSpeakingListJson(sort: { fields: [date], order: DESC }) {
+      edges {
+        node {
+          id
           title
           url
         }
