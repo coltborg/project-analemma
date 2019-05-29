@@ -11,24 +11,9 @@ import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
 function SEO({ description, keywords, lang, meta, title }) {
-  const {
-    site,
-    allImageSharp: { edges: images },
-  } = useStaticQuery(
+  const { site } = useStaticQuery(
     graphql`
       query {
-        allImageSharp(
-          filter: { id: { eq: "14abd2e0-a2b9-58b0-963c-4af32b722a03" } }
-        ) {
-          edges {
-            node {
-              id
-              fluid {
-                src
-              }
-            }
-          }
-        }
         site {
           siteMetadata {
             author
@@ -43,13 +28,6 @@ function SEO({ description, keywords, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  // Idk why, but the netlify build is failing because images is an empty array
-  // on the "/eslint-for-vuejs" page build 🤔
-  // So have to conditionally insert into the variable
-  let shareImage
-  if (images.length > 0) {
-    shareImage = images[0].node.fluid
-  }
 
   return (
     <Helmet
@@ -68,10 +46,6 @@ function SEO({ description, keywords, lang, meta, title }) {
           content: metaDescription,
         },
         {
-          name: `image`,
-          content: shareImage && shareImage.src,
-        },
-        {
           property: `og:title`,
           content: title,
         },
@@ -82,10 +56,6 @@ function SEO({ description, keywords, lang, meta, title }) {
         {
           property: `og:type`,
           content: `website`,
-        },
-        {
-          property: `og:image`,
-          content: shareImage && shareImage.src,
         },
         {
           name: `twitter:card`,
@@ -102,10 +72,6 @@ function SEO({ description, keywords, lang, meta, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
-        },
-        {
-          name: `twitter:image`,
-          content: shareImage && shareImage.src,
         },
       ]
         .concat(
