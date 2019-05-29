@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
     author: `@coltborg`,
+    bodyClasses: `min-h-screen bg-neutral-50`,
     description: `Colt Borg is a frontend developer, learning in public.`,
+    htmlClasses: `font-ia-writer text-lg md:text-xl text-neutral-900 antialiased leading-normal`,
+    rootUrl: `https://nostalgic-nightingale-de515a.netlify.com/`,
     title: `Colt Borg`,
     titleInitials: `CB`,
-    htmlClasses: `font-ia-writer text-lg md:text-xl text-neutral-900 antialiased leading-normal`,
-    bodyClasses: `min-h-screen bg-neutral-50`,
   },
   plugins: [
     {

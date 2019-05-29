@@ -20,6 +20,7 @@ function SEO({ description, keywords, lang, meta, title }) {
             bodyClasses
             description
             htmlClasses
+            rootUrl
             title
           }
         }
@@ -42,6 +43,10 @@ function SEO({ description, keywords, lang, meta, title }) {
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
+          name: `image`,
+          content: `${site.siteMetadata.rootUrl}coltborg-share.png`,
+        },
+        {
           name: `description`,
           content: metaDescription,
         },
@@ -50,12 +55,20 @@ function SEO({ description, keywords, lang, meta, title }) {
           content: title,
         },
         {
+          name: `og:image`,
+          content: `${site.siteMetadata.rootUrl}coltborg-share.png`,
+        },
+        {
           property: `og:description`,
           content: metaDescription,
         },
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          name: `twitter:image`,
+          content: `${site.siteMetadata.rootUrl}coltborg-share.png`,
         },
         {
           name: `twitter:card`,
