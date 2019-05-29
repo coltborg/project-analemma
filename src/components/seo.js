@@ -45,7 +45,7 @@ function SEO({ description, keywords, lang, meta, title }) {
   const metaDescription = description || site.siteMetadata.description
   // Idk why, but the netlify build is failing because images is an empty array
   // on the "/eslint-for-vuejs" page build 🤔
-  // So have to contionally pull the variable
+  // So have to conditionally insert into the variable
   let shareImage
   if (images.length > 0) {
     shareImage = images[0].node.fluid
