@@ -43,10 +43,13 @@ function SEO({ description, keywords, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  console.log('images', images)
-  const {
-    node: { fluid: shareImage },
-  } = images[0]
+  // Idk why, but the netlify build is failing because images is an empty array
+  // on the "/eslint-for-vuejs" page build 🤔
+  // So have to contionally pull the variable
+  let shareImage
+  if (images.length > 0) {
+    shareImage = images[0].node.fluid
+  }
 
   return (
     <Helmet
@@ -66,7 +69,7 @@ function SEO({ description, keywords, lang, meta, title }) {
         },
         {
           name: `image`,
-          content: shareImage.src,
+          content: shareImage && shareImage.src,
         },
         {
           property: `og:title`,
@@ -82,7 +85,7 @@ function SEO({ description, keywords, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: shareImage.src,
+          content: shareImage && shareImage.src,
         },
         {
           name: `twitter:card`,
@@ -102,7 +105,7 @@ function SEO({ description, keywords, lang, meta, title }) {
         },
         {
           name: `twitter:image`,
-          content: shareImage.src,
+          content: shareImage && shareImage.src,
         },
       ]
         .concat(
