@@ -43,6 +43,7 @@ function SEO({ description, keywords, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  console.log('images', images)
   const {
     node: { fluid: shareImage },
   } = images[0]
