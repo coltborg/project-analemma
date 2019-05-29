@@ -19,7 +19,7 @@ const IndexPage = ({
 }) => (
   <Layout applyGrid>
     <SEO
-      title="Home"
+      title="Colt Borg - Frontend Engineer"
       keywords={[
         'Colt Borg',
         'web development',
