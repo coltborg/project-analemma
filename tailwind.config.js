@@ -69,23 +69,16 @@ module.exports = {
       hd: '1920px',
     },
     fontFamily: {
-      'ia-writer': ['iA Writer Duospace', 'monospace'],
-      sans: [
-        '-apple-system',
-        'BlinkMacSystemFont',
-        '"Segoe UI"',
-        'Roboto',
-        '"Helvetica Neue"',
-        'Arial',
-        '"Noto Sans"',
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-        '"Noto Color Emoji"',
+      'ia-writer': [
+        'iA Writer Duospace',
+        'Georgia',
+        'Cambria',
+        '"Times New Roman"',
+        'Times',
+        'serif',
       ],
-      serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
-      mono: [
+      'dank-mono': [
+        'dm',
         'Menlo',
         'Monaco',
         'Consolas',

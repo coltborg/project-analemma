@@ -13,6 +13,8 @@ import { SkipNavLink, SkipNavContent } from '@reach/skip-nav'
 import Header from './header'
 import Footer from './footer'
 import SEO from './seo'
+import '../fonts/ia-writer.css'
+import '../fonts/dank-mono.css'
 import '../styles/styles.css'
 
 const Layout = ({ children, applyGrid }) => (
