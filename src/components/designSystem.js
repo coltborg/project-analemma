@@ -20,7 +20,7 @@ H1.propTypes = {
 
 export const H2 = ({ children, className, ...rest }) => (
   <h2
-    className={`my-6 text-xl md:text-2xl lg:text-3xl font-bold leading-tight ${className ||
+    className={`my-6 text-xl md:text-2xl font-bold leading-tight ${className ||
       ''}`}
     {...rest}
   >
@@ -35,7 +35,7 @@ H2.propTypes = {
 
 export const H3 = ({ children, className, ...rest }) => (
   <h3
-    className={`my-4 text-lg md:text-xl lg:text-2xl font-bold leading-tight ${className ||
+    className={`my-4 text-lg md:text-xl font-bold leading-tight ${className ||
       ''}`}
     {...rest}
   >
@@ -49,7 +49,7 @@ H3.propTypes = {
 }
 
 export const P = ({ children, className, ...rest }) => (
-  <p className={`mb-8 ${className || ''}`} {...rest}>
+  <p className={`mb-8 text-neutral-600 ${className || ''}`} {...rest}>
     {children}
   </p>
 )
