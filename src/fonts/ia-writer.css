@@ -3,8 +3,7 @@
   font-family: "iA Writer Duospace";
   font-style: normal;
   font-weight: normal;
-  src: url("iAWriterDuospace-Regular.eot") format("embedded-opentype"),
-    url("iAWriterDuospace-Regular.woff2") format("woff2"),
+  src: url("iAWriterDuospace-Regular.woff2") format("woff2"),
     url("iAWriterDuospace-Regular.woff") format("woff");
 }
 
@@ -13,8 +12,7 @@
   font-family: "iA Writer Duospace";
   font-style: italic;
   font-weight: normal;
-  src: url("iAWriterDuospace-Italic.eot") format("embedded-opentype"),
-    url("iAWriterDuospace-Italic.woff2") format("woff2"),
+  src: url("iAWriterDuospace-Italic.woff2") format("woff2"),
     url("iAWriterDuospace-Italic.woff") format("woff");
 }
 
@@ -23,8 +21,7 @@
   font-family: "iA Writer Duospace";
   font-style: normal;
   font-weight: bold;
-  src: url("iAWriterDuospace-Bold.eot") format("embedded-opentype"),
-    url("iAWriterDuospace-Bold.woff2") format("woff2"),
+  src: url("iAWriterDuospace-Bold.woff2") format("woff2"),
     url("iAWriterDuospace-Bold.woff") format("woff");
 }
 
@@ -33,7 +30,6 @@
   font-family: "iA Writer Duospace";
   font-style: italic;
   font-weight: bold;
-  src: url("iAWriterDuospace-BoldItalic.eot") format("embedded-opentype"),
-    url("iAWriterDuospace-BoldItalic.woff2") format("woff2"),
+  src: url("iAWriterDuospace-BoldItalic.woff2") format("woff2"),
     url("iAWriterDuospace-BoldItalic.woff") format("woff");
 }

@@ -29,7 +29,7 @@ const IndexPage = ({
       ]}
     />
     {articles.length > 0 && (
-      <>
+      <section>
         <h2 className="my-6 text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
           Articles
         </h2>
@@ -51,26 +51,28 @@ const IndexPage = ({
               },
             }) => (
               <ListItem key={article.id}>
-                <Link to={slug} className="p-2 flex items-center">
-                  <div
-                    className="mr-2 text-2xl hidden sm:block"
-                    aria-hidden="true"
-                  >
-                    {emoji}
-                  </div>
-                  <div>
-                    <div className="text-lg font-bold">{title}</div>
-                    <div className="text-sm">{description}</div>
-                  </div>
-                </Link>
+                <article>
+                  <Link to={slug} className="p-2 flex items-center">
+                    <div
+                      className="mr-2 text-2xl hidden sm:block"
+                      aria-hidden="true"
+                    >
+                      {emoji}
+                    </div>
+                    <header>
+                      <h1 className="text-lg font-bold">{title}</h1>
+                      <div className="text-sm">{description}</div>
+                    </header>
+                  </Link>
+                </article>
               </ListItem>
             )
           )}
         </ul>
-      </>
+      </section>
     )}
     {speakingList.length > 0 && (
-      <>
+      <section>
         <h2 className="my-6 text-xl md:text-2xl lg:text-3xl font-bold leading-tight ">
           Speaking
         </h2>
@@ -88,10 +90,10 @@ const IndexPage = ({
             </ListItem>
           ))}
         </ul>
-      </>
+      </section>
     )}
     {quotes.length > 0 && (
-      <>
+      <section>
         <h2 className="my-6 text-xl md:text-2xl lg:text-3xl font-bold leading-tight ">
           From Other People
         </h2>
@@ -117,7 +119,7 @@ const IndexPage = ({
             )
           )}
         </ul>
-      </>
+      </section>
     )}
   </Layout>
 )
