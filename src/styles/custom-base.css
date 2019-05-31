@@ -49,6 +49,16 @@ a:focus {
 ::-moz-selection { background: var(--primary-100); }
 ::selection { background: var(--primary-100); }
 
+pre ::-moz-selection {
+  background: var(--primary-400) !important;
+  color: var(--neutral-900) !important;
+}
+
+pre ::selection {
+  background: var(--primary-400) !important;
+  color: var(--neutral-900) !important;
+}
+
 /* Code
 ====================================== */
 code {
