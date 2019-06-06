@@ -1,6 +1,20 @@
 /* Custom Base
 ========================================================================== */
 
+/* Quote
+====================================== */
+.stylistic-quote-mark {
+  font-size: 5rem;
+  right: 100%;
+  @apply mr-2 hidden font-dank-mono text-neutral-500 absolute top-0 leading-none;
+}
+
+@screen sm {
+  .stylistic-quote-mark {
+    @apply block;
+  }
+}
+
 /* Links
 ====================================== */
 a:focus {
@@ -8,16 +22,13 @@ a:focus {
 }
 
 .article a,
-.not-found a {
+.not-found a,
+.quote a {
   @apply bg-primary-100 text-primary-900 border-b border-primary-900
 }
 
 .footer a {
   @apply text-primary-900 border-b border-primary-900
-}
-
-.quote a {
-  @apply text-neutral-600 border-b border-neutral-600
 }
 
 .article a:visited {
@@ -62,7 +73,11 @@ pre ::selection {
 /* Code
 ====================================== */
 code {
-  @apply p-1 rounded bg-neutral-100 text-neutral-700
+  @apply px-1 font-dank-mono rounded bg-neutral-100 text-neutral-700
+}
+
+.language-git .token.string {
+  color: inherit !important;
 }
 
 /* Grid
@@ -130,4 +145,10 @@ code {
   width: auto;
   height: auto;
   clip: auto;
+}
+
+/* Tweet Embed
+====================================== */
+.article .twitter-tweet.twitter-tweet-rendered {
+  width: initial !important;
 }

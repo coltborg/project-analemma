@@ -24,7 +24,7 @@ var theme /*: PrismTheme */ = {
         "deleted"
       ],
       "style": {
-        "color": "rgba(239, 83, 80, 0.56)",
+        "color": "rgb(203, 46, 43)",
         "fontStyle": "italic"
       }
     },

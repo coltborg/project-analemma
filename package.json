@@ -30,6 +30,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
+    "react-tweet-embed": "^1.2.2",
     "tailwindcss": "^1.0.1"
   },
   "devDependencies": {
@@ -60,9 +61,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/coltborg/project-analemma"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/coltborg/project-analemma/issues"
   }
 }

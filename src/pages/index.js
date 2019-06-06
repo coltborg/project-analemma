@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import ListItem from '../components/listItem'
+import Quote from '../components/quote'
 import SEO from '../components/seo'
 
 const IndexPage = ({
@@ -100,21 +101,22 @@ const IndexPage = ({
         <ul>
           {quotes.map(
             ({
+              node: { avatar },
+              node: { company },
               node: { id },
               node: { person },
               node: { quote },
               node: { url },
             }) => (
               <li key={id} className="mb-2">
-                <blockquote className="p-4 bg-neutral-100 text-neutral-600 border-l-4 border-neutral-500 italic quote">
-                  <p className="mb-2">"{quote}"</p>
-                  <cite>
-                    -{' '}
-                    <a href={url} target="_blank" rel="noopener noreferrer">
-                      {person}
-                    </a>
-                  </cite>
-                </blockquote>
+                <Quote
+                  avatarAlt={`Avatar of ${person}`}
+                  avatarUrl={avatar}
+                  company={company}
+                  linkUrl={url}
+                  name={person}
+                  quote={quote}
+                />
               </li>
             )
           )}
@@ -130,7 +132,7 @@ IndexPage.propTypes = {
 
 export const pageQuery = graphql`
   query indexPage {
-    allMdx {
+    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
       edges {
         node {
           id
@@ -146,6 +148,8 @@ export const pageQuery = graphql`
     allQuotesJson {
       edges {
         node {
+          avatar
+          company
           id
           person
           quote
