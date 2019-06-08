@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
 const Header = ({ siteTitle, siteTitleInitials }) => (
-  <header className="px-1 md:mb-6 border-t-4 border-primary-400">
+  <header className="px-4 md:mb-6 border-t-4 border-primary-400">
     <nav>
       <ul className="text-lg md:text-xl hd flex items-baseline">
         <li className="flex-grow">
