@@ -5,5 +5,12 @@
     "person": "nickd",
     "quote": "I trust him.",
     "url": "https://draft.nu/"
+  },
+  {
+    "avatar": "sergio-avatar.jpg",
+    "company": "EA",
+    "person": "Sergio Gomez",
+    "quote": "Colt would be a true asset for any dev team, I've always been impressed with his ability to find optimal solutions with great attention to detail from planning to execution. And, of course, a great communicator on both presenting projects and ideas, or mentoring other devs.",
+    "url": "https://www.ea.com/"
   }
 ]

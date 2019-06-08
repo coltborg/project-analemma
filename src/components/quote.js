@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Quote = ({ avatarAlt, avatarUrl, company, linkUrl, name, quote }) => (
-  <blockquote className="p-4 bg-neutral-100 text-neutral-600 text-xl border-l-4 border-neutral-500 italic relative quote">
+  <blockquote className="p-4 bg-neutral-100 text-neutral-600 border-l-4 border-neutral-500 italic relative quote">
     <div className="stylistic-quote-mark" aria-hidden="true">
       &ldquo;
     </div>
