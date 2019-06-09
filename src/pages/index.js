@@ -53,7 +53,11 @@ const IndexPage = ({
             }) => (
               <ListItem key={article.id}>
                 <article>
-                  <Link to={slug} className="p-2 flex items-center">
+                  <Link
+                    to={slug}
+                    className="p-2 flex items-center"
+                    aria-label={title}
+                  >
                     <div
                       className="mr-2 text-2xl hidden sm:block"
                       aria-hidden="true"
@@ -108,7 +112,7 @@ const IndexPage = ({
               node: { quote },
               node: { url },
             }) => (
-              <li key={id} className="mb-2">
+              <li key={id} className="mb-8">
                 <Quote
                   avatarAlt={`Avatar of ${person}`}
                   avatarUrl={avatar}
