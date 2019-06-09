@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/583805b8-06de-447e-9086-0f20ed88607e/deploy-status)](https://app.netlify.com/sites/nostalgic-nightingale-de515a/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/583805b8-06de-447e-9086-0f20ed88607e/deploy-status)](https://app.netlify.com/sites/project-analemma/deploys)
 
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">

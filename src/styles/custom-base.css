@@ -85,9 +85,9 @@ code {
 .grid {
   display: grid;
   grid-template-columns:
-    minmax(theme('spacing.1'), 1fr)
+    minmax(theme('spacing.4'), 1fr)
     minmax(auto, 63ch)
-    minmax(theme('spacing.1'), 1fr);
+    minmax(theme('spacing.4'), 1fr);
 }
 
 .grid pre {
