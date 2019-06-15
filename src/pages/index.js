@@ -12,6 +12,9 @@ const IndexPage = ({
     allMdx: { edges: articles },
   },
   data: {
+    allProjectsJson: { edges: projects },
+  },
+  data: {
     allQuotesJson: { edges: quotes },
   },
   data: {
@@ -54,13 +57,13 @@ const IndexPage = ({
               <ListItem key={article.id}>
                 <article>
                   <Link
-                    to={slug}
-                    className="p-2 flex items-center"
                     aria-label={title}
+                    className="p-2 flex items-center"
+                    to={slug}
                   >
                     <div
-                      className="mr-2 text-2xl hidden sm:block"
                       aria-hidden="true"
+                      className="mr-2 text-2xl hidden sm:block"
                     >
                       {emoji}
                     </div>
@@ -86,14 +89,70 @@ const IndexPage = ({
             <ListItem key={title}>
               <a
                 className="p-2"
-                target="_blank"
-                rel="noopener noreferrer"
                 href={url}
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 {title}
               </a>
             </ListItem>
           ))}
+        </ul>
+      </section>
+    )}
+    {projects.length > 0 && (
+      <section>
+        <h2 className="my-6 text-xl md:text-2xl lg:text-3xl font-bold leading-tight ">
+          Side Projects
+        </h2>
+        <ul>
+          {projects.map(
+            ({
+              node: { description },
+              node: { emoji },
+              node: { id },
+              node: { name },
+              node: { tools },
+              node: { url },
+            }) => (
+              <ListItem key={id}>
+                <article>
+                  <a
+                    aria-label={name}
+                    className="p-2 flex items-center"
+                    href={url}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <div
+                      className="mr-2 text-2xl hidden sm:block"
+                      aria-hidden="true"
+                    >
+                      {emoji}
+                    </div>
+                    <div>
+                      <header>
+                        <h1 className="text-lg font-bold">{name}</h1>
+                      </header>
+                      <div className="text-sm">{description}</div>
+                      {tools && (
+                        <>
+                          <div className="mt-2 text-sm font-bold">Tools</div>
+                          <ul className="flex flex-wrap">
+                            {tools.map(tool => (
+                              <li className="mb-1 px-1 py-0  mr-2 text-xs bg-secondary-50 text-secondary-500 rounded">
+                                {tool}
+                              </li>
+                            ))}
+                          </ul>
+                        </>
+                      )}
+                    </div>
+                  </a>
+                </article>
+              </ListItem>
+            )
+          )}
         </ul>
       </section>
     )}
@@ -143,9 +202,21 @@ export const pageQuery = graphql`
           frontmatter {
             description
             emoji
-            title
             slug
+            title
           }
+        }
+      }
+    }
+    allProjectsJson {
+      edges {
+        node {
+          description
+          emoji
+          id
+          name
+          tools
+          url
         }
       }
     }
