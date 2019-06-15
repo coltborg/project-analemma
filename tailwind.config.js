@@ -37,7 +37,15 @@ module.exports = {
 
       secondary: {
         900: 'var(--secondary-900)',
+        800: 'var(--secondary-800)',
+        700: 'var(--secondary-700)',
+        600: 'var(--secondary-600)',
+        500: 'var(--secondary-500)',
+        400: 'var(--secondary-400)',
+        300: 'var(--secondary-300)',
+        200: 'var(--secondary-200)',
         100: 'var(--secondary-100)',
+        50: 'var(--secondary-50)',
       },
     },
     spacing: {
