@@ -1,0 +1,14 @@
+[
+  {
+    "description": "A small Vue.js app that keeps track of a user defined time. Using localStorage to remember the time and the notification API to prompt when the time finishes.",
+    "emoji": "⏲",
+    "name": "Visual Timer",
+    "tools": [
+      "LocalStorage",
+      "Notification API",
+      "Tailwind CSS",
+      "Vue.js"
+    ],
+    "url": "https://visualtimer.coltborg.com/"
+  }
+]

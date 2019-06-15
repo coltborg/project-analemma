@@ -26,7 +26,15 @@
   --cyan-50: hsl(171, 82%, 94%);
 
   --purple-900: hsl(276, 91%, 23%);
+  --purple-800: hsl(274, 87%, 31%);
+  --purple-700: hsl(274, 87%, 37%);
+  --purple-600: hsl(274, 87%, 43%);
+  --purple-500: hsl(273, 80%, 49%);
+  --purple-400: hsl(268, 82%, 60%);
+  --purple-300: hsl(264, 96%, 70%);
+  --purple-200: hsl(262, 100%, 78%);
   --purple-100: hsl(262, 100%, 88%);
+  --purple-50: hsl(262, 90%, 96%);
 
   --neutral-900: var(--grey-900);
   --neutral-800: var(--grey-800);
@@ -51,5 +59,13 @@
   --primary-50: var(--cyan-50);
 
   --secondary-900: var(--purple-900);
+  --secondary-800: var(--purple-800);
+  --secondary-700: var(--purple-700);
+  --secondary-600: var(--purple-600);
+  --secondary-500: var(--purple-500);
+  --secondary-400: var(--purple-400);
+  --secondary-300: var(--purple-300);
+  --secondary-200: var(--purple-200);
   --secondary-100: var(--purple-100);
+  --secondary-50: var(--purple-50);
 }
