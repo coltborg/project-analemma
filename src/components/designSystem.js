@@ -63,6 +63,27 @@ P.propTypes = {
   className: PropTypes.string,
 }
 
+export const BLOCKQUOTE = ({ children, ...rest }) => (
+  <blockquote
+    className="p-4 mb-8 bg-neutral-100 text-neutral-600 border-l-4 border-neutral-500 italic relative quote"
+    {...rest}
+  >
+    <div className="stylistic-quote-mark" aria-hidden="true">
+      &ldquo;
+    </div>
+    {children}
+  </blockquote>
+)
+
+BLOCKQUOTE.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.array,
+    PropTypes.element,
+  ]),
+  className: PropTypes.string,
+}
+
 export const UL = ({ children, className, ...rest }) => (
   <ul
     className={`ml-4 mb-8 list-disc list-outside ${className || ''}`}
