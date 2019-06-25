@@ -9,7 +9,7 @@ import PropTypes from 'prop-types'
 import { MDXProvider } from '@mdx-js/react'
 import Hightlight, { defaultProps } from 'prism-react-renderer'
 import theme from './src/styles/customNightOwl'
-import { H1, H2, H3, P, UL } from './src/components/designSystem'
+import { H1, H2, H3, P, UL, BLOCKQUOTE } from './src/components/designSystem'
 
 const components = {
   wrapper: ({ children }) => <>{children}</>,
@@ -32,6 +32,9 @@ const components = {
     </h6>
   ),
   p: ({ children, ...rest }) => <P {...rest}>{children}</P>,
+  blockquote: ({ children, ...rest }) => (
+    <BLOCKQUOTE {...rest}>{children}</BLOCKQUOTE>
+  ),
   ul: ({ children, ...rest }) => <UL {...rest}>{children}</UL>,
   a: ({ children, href, ...rest }) => (
     <a href={href} target="_blank" rel="noopener noreferrer" {...rest}>
@@ -117,6 +120,14 @@ components.p.propTypes = {
   ]),
 }
 
+components.blockquote.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.array,
+    PropTypes.element,
+  ]),
+}
+
 components.ul.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.string,
@@ -142,6 +153,7 @@ components.h4.displayName = 'mdx-h4'
 components.h5.displayName = 'mdx-h5'
 components.h6.displayName = 'mdx-h6'
 components.p.displayName = 'mdx-p'
+components.blockquote.displayName = 'mdx-blockquote'
 components.ul.displayName = 'mdx-ul'
 components.a.displayName = 'mdx-a'
 components.pre.displayName = 'mdx-pre'
